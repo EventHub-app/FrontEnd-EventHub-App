@@ -1,7 +1,8 @@
-import { LocateIcon, LocationEditIcon, Search } from 'lucide-react'
-import React from 'react'
-
+import { getUrlPath } from '@/routes/RouterUrl'
+import { LocateIcon, Search } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function Hero() {
+ const {  ProfissionalPageResultUrl} = getUrlPath()
     return (
         <div
             className='flex justify-center    w-full h-162.5'
@@ -45,7 +46,8 @@ export default function Hero() {
                         
                             />
                         </div>
-                        <div className='
+                         <Link to={ProfissionalPageResultUrl} >
+                          <div className='
                          flex justify-end  mt-5 xl:mt-0
                         '>
                             <button className='bg-main flex p-2 rounded  items-center cursor-pointer
@@ -54,7 +56,7 @@ export default function Hero() {
                                 <Search />
                                 <p className='font-semibold text-white ml-2'>Search</p>
                             </button>
-                        </div>
+                        </div></Link>
                     </div>
                 </div>
 

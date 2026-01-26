@@ -9,7 +9,7 @@ import Footer from '@/module/components/footer/Footer'
 export default function App() {
   return (
     <div>
-      <Header />
+      <Header isInSearchResultPage={false} />
       <Hero />
       <Categories />
       <HowItsWorks/>
