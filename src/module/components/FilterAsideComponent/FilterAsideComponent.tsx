@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function FilterAsideComponent() {
     return (
-        <div className=' '>
+        <div className=' w-full'>
             <div>
                 <h1 className='text-xl font-bold text-zinc-800 '>
                     Filters
@@ -42,7 +42,7 @@ export default function FilterAsideComponent() {
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarFull} alt="" className='w-5' />
                         </div>
-                        <p className='text-[15px] text-zinc-600 ml-2 font-bold'>5 Stars</p>
+                        <p className='text-[15px] text-zinc-600 ml-2 font-bold whitespace-nowrap'>5 Stars</p>
                     </div>
                     <div className='flex mt-4 items-center'>
                         <input type="checkbox" className='w-5 h-5 cursor-pointer' />
@@ -53,7 +53,7 @@ export default function FilterAsideComponent() {
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarEmpty} alt="" className='w-5' />
                         </div>
-                        <p className='text-[15px] text-zinc-600 ml-2 font-bold'>4 Stars</p>
+                        <p className='text-[15px] text-zinc-600 ml-2 font-bold whitespace-nowrap'>4 Stars</p>
                     </div>
                     <div className='flex mt-4 items-center'>
                         <input type="checkbox" className='w-5 h-5 cursor-pointer' />
@@ -64,7 +64,7 @@ export default function FilterAsideComponent() {
                             <img src={Images.StarEmpty} alt="" className='w-5' />
                             <img src={Images.StarEmpty} alt="" className='w-5' />
                         </div>
-                        <p className='text-[15px] text-zinc-600 ml-2 font-bold'>3 Stars</p>
+                        <p className='text-[15px] text-zinc-600 ml-2 font-bold whitespace-nowrap'>3 Stars</p>
                     </div>
                 </div>
                 <div>
@@ -98,6 +98,7 @@ export default function FilterAsideComponent() {
                      </div>
                 </div>
             </div>
+            
         </div>
     )
 }

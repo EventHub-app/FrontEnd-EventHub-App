@@ -9,16 +9,17 @@ export default function HowItsWorks() {
                 <p className='text-zinc-600 text-xl mt-2 text-center'>Three simple steps to plan your perfect event without the stress.</p>
             </div>
 
-            <div className='w-8/12 flex flex-col justify-center item lg:flex lg:flex-row mt-20'>
-                <div>
+            <div className='lg:w-8/12 flex flex-col items-center justify-center item lg:flex lg:flex-row mt-20'>
+                <div className='w-11/12 lg:w-1/3'>
                     <HowItWorksCard Icon={SearchIcon} title={'Discover Professionals'} text={'Browse through thousands of verified service providers with real reviews from past clients.'} />
 
                 </div>
-                <div className='mr-5 ml-5'>
+                <div className='lg:mr-5 lg:ml-5 w-11/12 lg:w-1/3'>
                     <HowItWorksCard Icon={ShieldCheck} title={'Book & Pay Securely'} text={'Our secure platform handles payments and contracts so you can book with complete peace of mind.'} />
 
                 </div>
-                <div>
+                              <div className='w-11/12 lg:w-1/3'>
+
                     <HowItWorksCard Icon={Camera} title={'Enjoy Your Event'} text={'Focus on your guests while our professionals handle the details. We´ve got you covered'} />
 
                 </div>

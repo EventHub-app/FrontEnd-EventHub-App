@@ -4,7 +4,7 @@ import { SendHorizonal } from "lucide-react"
 export default function Footer() {
     return (
         <div className='flex justify-center p-10'>
-            <footer className='w-8/12 flex flex-col  lg:flex lg:flex-col  xl:flex-row'>
+            <footer className='md:w-10/12 flex flex-col  lg:flex lg:flex-col  xl:flex-row'>
                 <div className="xl:w-1/4">
                     <div
                         className='flex flex-reverse'
@@ -19,7 +19,7 @@ export default function Footer() {
                             EventHub
                         </h1>
                     </div>
-                    <p className='text-zinc-600 xl:p-4'>
+                    <p className='text-zinc-600 mt-4 lg:mt-0 xl:p-4'>
                         Connecting event organizers with the world's most talented service providers to create unforgettable experiences.
                     </p>
                 </div>
@@ -48,7 +48,7 @@ export default function Footer() {
                     <h1 className="font-semibold text-[20px]">Newsletter</h1>
                     <p className="mt-4 text-zinc-500">Get event planning tips and the latest trends.</p>
                      <div className="mt-4 flex items-center">
-                         <input type="text" className=" rounded-md border border-zinc-300 w-full p-2 outline-main" />
+                         <input type="text" className=" rounded-md border border-zinc-300 w-full p-2 outline-main" placeholder="email@gmail.com" />
                            <div className="bg-main text-white p-2 rounded ml-2 cursor-pointer">
                              <SendHorizonal/>
                            </div>
