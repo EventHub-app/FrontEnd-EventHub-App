@@ -33,16 +33,16 @@ export default function FilterAsideComponent() {
                         </h1>
                     </div>
 
-                    <div className='flex mt-4 items-center'>
+                    <div className='flex mt-4 items-center justify-start'>
                         <input type="checkbox" className='w-5 h-5 cursor-pointer' />
-                        <div className='flex ml-2'>
+                        <div className='flex ml-2 '>
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarFull} alt="" className='w-5' />
                             <img src={Images.StarFull} alt="" className='w-5' />
                         </div>
-                        <p className='text-[15px] text-zinc-600 ml-2 font-bold whitespace-nowrap'>5 Stars</p>
+                        <p className='text-[15px] text-zinc-600 ml-2 font-bold whitespace-nowrap '>5 Stars</p>
                     </div>
                     <div className='flex mt-4 items-center'>
                         <input type="checkbox" className='w-5 h-5 cursor-pointer' />

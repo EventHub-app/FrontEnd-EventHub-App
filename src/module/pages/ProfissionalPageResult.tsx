@@ -8,11 +8,11 @@ export default function ProfissionalPageResult() {
     return (
         <div className='flex flex-col items-center w-full '>
             <Header isInSearchResultPage={true} />
-            <div className='w-9/12 flex'>
+            <div className='w-11/12 lg:w-10/12 md:flex md:flex-col lg:flex lg:flex-col xl:flex xl:flex-row'>
                 <div className='w-full '>
                     <FilterAsideComponent />
                 </div>
-                <div className=' w-10/12 flex flex-col justify-center '>
+                <div className=' flex flex-col w-full lg:w-10/12 lg:flex lg:flex-col lg:justify-center '>
                     <CategoryFilter />
                     <Services />
                 </div>

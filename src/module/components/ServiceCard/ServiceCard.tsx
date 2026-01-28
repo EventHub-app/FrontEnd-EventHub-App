@@ -5,7 +5,7 @@ import React from 'react'
 export default function ServiceCard(params:ServiceType) {
    const { name, profission, location,  startFrom } = params
   return (
-    <div className=' relative  w-full ml-10 h-100  flex flex-col    rounded-md bg-zinc-200'
+    <div className=' relative  w-full lg:ml-10 h-100  flex flex-col    rounded-md bg-zinc-100'
    
     >
         <div   style={{backgroundImage:`url(${Images.BgImage})`}} className='bg-center bg-cover w-full h-45 rounded-t-md'>
