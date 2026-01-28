@@ -3,7 +3,7 @@ import type { ServiceType } from '@/module/types/ServiceType'
 import React from 'react'
 
 export default function ServiceCard(params:ServiceType) {
-   const { name, profission, location,  startFrom } = params
+   const { name, profission, location,  start_from } = params
   return (
     <div className=' relative  w-full lg:ml-10 h-100  flex flex-col    rounded-md bg-zinc-100'
    
@@ -21,7 +21,7 @@ export default function ServiceCard(params:ServiceType) {
             </div>
         
          <div className='text-zinc-800 mt-4'>
-            <p  className='text-[18px]   font-bold text-start ml-4'>Starting From {startFrom}</p>
+            <p  className='text-[18px]   font-bold text-start ml-4'>Starting From {start_from}</p>
              <button className='bg-main text-white rounded p-5 text-sm  mt-2 w-full cursor-pointer'>View Profile</button>
          </div>
     </div>

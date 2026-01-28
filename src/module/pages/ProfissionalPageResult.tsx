@@ -3,8 +3,16 @@ import FilterAsideComponent from '@/module/components/FilterAsideComponent/Filte
 import Services from '../components/services/Services'
 import CategoryFilter from '../components/Category-Filter/CategoryFilter'
 import Footer from '../components/footer/Footer'
+import useListService from '../hooks/useListService'
+import Loader from '../components/Loader/Loader'
 
 export default function ProfissionalPageResult() {
+   const { 
+     dataService,
+     isOpened
+     
+   } =  useListService()
+    console.log(dataService)
     return (
         <div className='flex flex-col items-center w-full '>
             <Header isInSearchResultPage={true} />
@@ -20,6 +28,7 @@ export default function ProfissionalPageResult() {
             <div className='w-full'>
                  <Footer/>
             </div>
+            <Loader isOpended={isOpened}/>
         </div>
     )
 }
