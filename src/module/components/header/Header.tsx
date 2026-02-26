@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "@/assets/celebration_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
-import { Menu, Search } from 'lucide-react'
+import { Menu, Search, X } from 'lucide-react'
 import type { HeaderType } from '@/module/types/HeaderType'
+import MenuMbile from '../Menu-mobile/MenuMbile'
+import { Link } from 'react-router-dom'
 export default function Header(params: HeaderType) {
     const { isInSearchResultPage } = params
+    const [isOpened, setIsIopened] = useState(false)
     return (
         <div
             className='bg-white
@@ -77,28 +80,41 @@ export default function Header(params: HeaderType) {
                         <div
                             className='flex lg:hidden'
                         >
-                            <Menu size={40} />
+                            {
+                                isOpened ?
+                                    <X size={40} onClick={() => setIsIopened(!isOpened)}   className='transition  ease-in duration-300'/>
+
+                                    : <Menu size={40} onClick={() => setIsIopened(!isOpened)}   className='transition  ease-out duration-300'/>
+                            }
+
                         </div>
                         <button className='font-semibold text-xl cursor-pointer
                          font-poppins  hidden  md:hidden lg:flex
                         '>
-                            Login
+                            <Link to={"/auth/login"}>
+                                Login
+                            </Link>
                         </button>
                     </div>
                 </nav>
             </header>
             {
-                  isInSearchResultPage ? (
-                     <div className='w-full mt-5 flex items-center justify-center md:block md:hidden md:hidden md:hidden'>
-                <input type="text"
-                    className='border p-2 border-zinc-400 text-zinc-500  outline-none rounded-full w-4/2'
-                    placeholder='search profissi....'
-                />
-                <button className='ml-2 bg-main rounded-full text-white p-2  cursor-pointer'>
-                    <Search />
-                </button>
-            </div>
-                  ):""
+                isOpened ?
+                    <MenuMbile isOpened={isOpened} setIOpened={setIsIopened} />
+                    : ""
+            }
+            {
+                isInSearchResultPage ? (
+                    <div className='w-full mt-5 flex items-center justify-center md:block md:hidden md:hidden md:hidden'>
+                        <input type="text"
+                            className='border p-2 border-zinc-400 text-zinc-500  outline-none rounded-full w-4/2'
+                            placeholder='search profissi....'
+                        />
+                        <button className='ml-2 bg-main rounded-full text-white p-2  cursor-pointer'>
+                            <Search />
+                        </button>
+                    </div>
+                ) : ""
             }
         </div>
     )

@@ -3,9 +3,10 @@ import { getUrlPath } from "@/routes/RouterUrl";
 import App from "@/App";
 import ProfissionalPageResult from "@/module/pages/ProfissionalPageResult";
 import LoginPage from "@/module/pages/LoginPage";
+import Dashbord from "@/module/components/Dashbord/Dashbord";
 
 
- const {HomePageUrl, ProfissionalPageResultUrl, LoginPageUrl} = getUrlPath();
+ const {HomePageUrl, ProfissionalPageResultUrl, LoginPageUrl, DashbordPageUrl} = getUrlPath();
  
  export const router = createBrowserRouter([
       {
@@ -19,5 +20,9 @@ import LoginPage from "@/module/pages/LoginPage";
       {
           path:LoginPageUrl,
           element:<LoginPage/>
+      },
+      {
+          path:DashbordPageUrl,
+          element:<Dashbord/>
       }
  ])
